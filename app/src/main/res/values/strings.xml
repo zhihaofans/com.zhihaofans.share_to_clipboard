@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">分享到剪贴板</string>
+    <string name="text_helloworld">请分享一些文本给我。</string>
+    <string name="text_copySu">已复制到剪贴板。</string>
+    <string name="text_copyFail">复制失败</string>
+</resources>
