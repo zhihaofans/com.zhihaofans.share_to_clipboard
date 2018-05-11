@@ -2,11 +2,11 @@ package com.zhihaofans.share_to_clipboard;
 
 import android.app.Activity;
 import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-import android.content.ClipboardManager;
 
 import java.util.Objects;
 
@@ -22,13 +22,13 @@ public class ShareActivity extends Activity {
                 ClipboardManager clipManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
                 if (clipManager != null) {
                     clipManager.setPrimaryClip(ClipData.newPlainText("Hi", st));
-                    t(getString(R.string.text_copySu));
+                    t("已复制");
                 }
             } else {
-                t(getString(R.string.text_copyFail));
+                t("复制失败");
             }
         } else {
-            t(getString(R.string.text_copyFail));
+            t("复制失败");
         }
         finish();
     }
